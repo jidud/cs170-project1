@@ -31,8 +31,8 @@ vector<vector<int>> goal = { {1, 2, 3}, {4, 5, 6}, {7, 8, 0} };
 
 int misplacedTiles(const vector<vector<int>>& puzzle) {
     int mt = 0;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 3; i++) {    // row
+        for (int j = 0; j < 3; j++) {    // col    
             if (puzzle[i][j] != 0 && puzzle[i][j] != goal[i][j]) {
                 mt++;
             }
@@ -45,8 +45,8 @@ int misplacedTiles(const vector<vector<int>>& puzzle) {
 //https://www.geeksforgeeks.org/maximum-manhattan-distance-between-a-distinct-pair-from-n-coordinates/
 int manhattanDistance(const vector<vector<int>>& puzzle) {
     int dist = 0;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 3; i++) {    // row
+        for (int j = 0; j < 3; j++) {    // col
             if (puzzle[i][j] != 0) {
                 int value = puzzle[i][j] - 1;
                 int goalX = value / 3;
